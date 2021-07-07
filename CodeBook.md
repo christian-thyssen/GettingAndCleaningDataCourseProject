@@ -10,7 +10,7 @@ These signals were used to estimate variables of the feature vector for each pat
 
 We are interested in the mean and standard deviation of each measurement.
 
-The variables activity contains the performed activity (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) and the variable subject contains an ID of the person performing the activity.
+The variable "activity"" contains the performed activity (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) and the variable "subject"" contains an ID of the person performing the activity.
 
 Hence, the following 68 variables of the raw data are of interest (training and test sets):
 
