@@ -60,4 +60,4 @@ tidy.data.tibble = tibble(data.tibble)
 tidy.data.tibble <- tidy.data.tibble %>%
     group_by(activity, subject) %>%
     summarize(across(everything(), mean))
-write.table(tidy.data.tibble, file.path(data.dir, "data.txt"), row.names = FALSE)
+write.table(tidy.data.tibble, file.path(data.dir, "tidy.txt"), row.names = FALSE)
