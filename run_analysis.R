@@ -53,6 +53,7 @@ data.tibble <- data.tibble %>%
 names <- names(data.tibble)
 names <- tolower(names)
 names <- gsub("[-()]", "", names)
+names <- gsub("bodybody", "body", names)
 names(data.tibble) <- names
 
 # Step 5: From the data set in step 4, create a second, independent tidy data set with the average of each variable for each activity and each subject.

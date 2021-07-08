@@ -117,9 +117,9 @@ The observations are grouped by activity and subject. The resulting tidy data se
 - fbodygyromeany
 - fbodygyromeanz
 - fbodyaccmagmean
-- fbodybodyaccjerkmagmean
-- fbodybodygyromagmean
-- fbodybodygyrojerkmagmean
+- fbodyaccjerkmagmean
+- fbodygyromagmean
+- fbodygyrojerkmagmean
 - tbodyaccstdx
 - tbodyaccstdy
 - tbodyaccstdz
@@ -150,6 +150,6 @@ The observations are grouped by activity and subject. The resulting tidy data se
 - fbodygyrostdy
 - fbodygyrostdz
 - fbodyaccmagstd
-- fbodybodyaccjerkmagstd
-- fbodybodygyromagstd
-- fbodybodygyrojerkmagstd
+- fbodyaccjerkmagstd
+- fbodygyromagstd
+- fbodygyrojerkmagstd
