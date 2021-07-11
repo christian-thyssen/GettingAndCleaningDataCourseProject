@@ -1,7 +1,8 @@
 # Step 0: Download the raw data.
 data.dir <- "data"
 if(!dir.exists(data.dir)) dir.create(data.dir)
-data.url <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
+data.url <- paste("https://d396qusza40orc.cloudfront.net/",
+                  "getdata/projectfiles/UCI%20HAR%20Dataset.zip", sep = "")
 download.file(data.url, file.path(data.dir, "data.zip"))
 unzip(file.path(data.dir, "data.zip"), exdir = data.dir)
 
@@ -39,7 +40,8 @@ library(dplyr)
 
 data.tibble <- as_tibble(data.df, .name_repair = "minimal")
 
-# Step 2: Extract only the measurements on the mean and standard deviation for each measurement.
+# Step 2: Extract only the measurements on the mean and standard deviation for
+# each measurement.
 data.tibble <- data.tibble %>%
     select(contains("mean()") | contains("std()") | "activity" | "subject")
 
@@ -56,7 +58,8 @@ names <- gsub("[-()]", "", names)
 names <- gsub("bodybody", "body", names)
 names(data.tibble) <- names
 
-# Step 5: From the data set in step 4, create a second, independent tidy data set with the average of each variable for each activity and each subject.
+# Step 5: From the data set in step 4, create a second, independent tidy data
+# set with the average of each variable for each activity and each subject.
 tidy.data.tibble = tibble(data.tibble)
 tidy.data.tibble <- tidy.data.tibble %>%
     group_by(activity, subject) %>%
